@@ -1,0 +1,24 @@
+.App {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.main-1 {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #f4f1de;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-2 {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #3d405b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
