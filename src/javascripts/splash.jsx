@@ -88,7 +88,7 @@ function Splash() {
                 <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-stars.png' alt='splash-stars'/>
             </div>
             <div id='splash-circle' className='splash-circle'>
-                <h5>Scroll to Continue</h5>
+                <h5>scroll to continue</h5>
             </div>
             <div className='splash-text'>
                 <h1>Tom Leslie Li</h1>
