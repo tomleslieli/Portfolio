@@ -7,7 +7,7 @@ function NavBar() {
         <div className='navbar'>
             <div className='navbar-left'>
                 <div className='personal-logo'>
-                    Hi
+                    <img src='https://tomleslieli-portfolio.s3.amazonaws.com/tom-leslie-li-logo.png' alt='tom-leslie-li-logo'/>
                 </div>
             </div>
             <div className='navbar-right'>

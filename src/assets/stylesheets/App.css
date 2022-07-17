@@ -1,24 +1,123 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 .App {
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .main-1 {
     min-height: 100vh;
     min-width: 100%;
-    background-color: #f4f1de;
+    position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    margin: none;
 }
 
 .main-2 {
+    z-index: 20;
     min-height: 100vh;
     min-width: 100%;
-    background-color: #3d405b;
+    background-color: #0f2d30;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
+    margin: none;
+}
+
+.splash-asset {
+    z-index: 5;
+    position: absolute;
+    min-width: 100%;
+    overflow-y: none;
+}
+
+.splash-asset-border {
+    z-index: 7;
+    position: absolute;
+    min-width: 100%;
+    overflow-x: hidden;
+    top: -10px;
+}
+
+.splash-asset > img {
+    z-index: 5;
+    min-width: 100%;
+}
+
+.splash-text {
+    position: fixed;
+    z-index: 6;
+    margin-top: -500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffddd1;
+}
+
+.splash-circle {
+    z-index: 5;
+    position: fixed;
+    background-color: #ffddd1;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 1000px;
+    top: 375px;
+    /* transform: translateY(400px); */
+}
+
+.splash-text > h1 {
+    font-size: 75px;
+    font-weight: 700;
+}
+
+.splash-text > h4 {
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main-2 {
+    position: absolute;
+}
+
+#splash-3 {
+    top: -75px;
+}
+
+#splash-2 {
+    top: 10px;
+}
+
+#splash-4 {
+    top: 10px;
+}
+
+#splash-5 {
+    top: 10px;
+}
+
+.splash-background {
+    position: fixed;
+    background: linear-gradient(#f79a8a, #303967);
+    min-height: 300vh;
+    min-width: 100%;
+    top: 0px;
+}
+
+.splash-stars {
+    position: absolute;
+    min-height: 80vh;
+    max-height: 80vh;
+    left: -600px;
+    top: 200px;
 }
