@@ -1,0 +1,163 @@
+.splash-asset {
+    z-index: 5;
+    position: absolute;
+    min-width: 100%;
+    overflow-y: none;
+}
+
+.splash-asset-border {
+    z-index: 7;
+    position: absolute;
+    min-width: 100%;
+    overflow-x: hidden;
+    top: 10px;
+}
+
+.splash-asset > img {
+    z-index: 5;
+    min-width: 100%;
+}
+
+.splash-text {
+    position: fixed;
+    z-index: 6;
+    margin-top: -500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffddd1;
+}
+
+.languages > h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.languages {
+    animation: slideIn 1s ease-out 0s infinite normal, fadeIn 1s ease-out infinite normal;
+    position: relative;
+}
+
+@keyframes slideIn {
+    0% {top: 5px}
+    100% {top: 0px}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0%}
+    50% {opacity: 100%}
+    85% {opacity: 100%}
+    100% {opacity: 0%}
+}
+
+.splash-text > h1 {
+    font-size: 80px;
+    font-weight: 700;
+    overflow: hidden;
+    border-right: .08em solid rgb(255, 255, 255); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .025em; 
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255, .5); }
+  }
+
+.main-2 {
+    position: absolute;
+}
+
+#splash-3 {
+    top: -65px;
+}
+
+#splash-2 {
+    top: 10px;
+}
+
+#splash-4 {
+    top: 10px;
+}
+
+#splash-5 {
+    top: 10px;
+}
+
+.splash-background {
+    position: fixed;
+    background: linear-gradient(#f79a8a, #303967);
+    min-height: 300vh;
+    min-width: 100%;
+    top: 0px;
+}
+
+.splash-stars {
+    position: absolute;
+    min-height: 80vh;
+    max-height: 80vh;
+    left: -600px;
+    top: 200px;
+}
+
+.splash-circle {
+    z-index: 5;
+    position: fixed;
+    background-color: #ffddd1;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 1000px;
+    top: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.splash-circle > h5 {
+    animation: slowPulse 7.5s ease 2.5s infinite normal;
+    opacity: 0%;
+}
+
+@keyframes slowPulse {
+    0% {opacity: 0%}
+    50% {opacity: 100%}
+    100% {opacity: 0%}
+}
+
+.splash-circle:hover {
+    background-color: #7c3a23;
+}
+
+.splash-birds {
+    z-index: 4;
+    position: relative;
+    top: -400px;
+    left: 1000px;
+    animation: flying 10s linear
+}
+
+.splash-birds > img {
+    max-width: 125px;
+}
+
+@keyframes flying {
+    0%{ left: 1000px }
+    100%{ left: -1000px }
+}
