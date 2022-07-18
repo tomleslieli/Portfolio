@@ -80,10 +80,10 @@ function Splash() {
         splash0left.style.top = -10 - scrollValue * 0.2 + 'px';
         splash0right.style.left = scrollValue * 0.5 + 'px';
         splash0right.style.top = -10 - scrollValue * 0.2 + 'px';
-        splashCircle.style.top = 325 + scrollValue * 2 + 'px';
-        splashBackground.style.top = '-' + scrollValue * 3 + 'px';
-        splashStars.style.left = -600 - scrollValue * 3 + 'px';
-        splashStars.style.top = 200 - scrollValue * 0.5 + 'px';
+        splashCircle.style.top = 250 + scrollValue * 2 + 'px';
+        splashBackground.style.left = '-' + scrollValue * 1.75 + 'px';
+        splashStars.style.left = -1100 - scrollValue * 3 + 'px';
+        splashStars.style.top = '-' + scrollValue * 0.5 + 'px';
       })
     }, [scrollTop])
 
@@ -93,15 +93,17 @@ function Splash() {
             <div id='splash-stars' className='splash-stars'>
                 <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-stars.png' alt='splash-stars'/>
             </div>
-            <div id='splash-circle' className='splash-circle'>
-                <h5>[scroll to continue]</h5>
-            </div>
-            <div className='splash-text'>
-                <h1>Tom Leslie Li</h1>
-                <div className='languages'>
-                    <h4>{languages[languageIndex]}</h4>
+            <div className='splash-center-container'>
+                <div id='splash-circle' className='splash-circle'>
+                    <h5>[scroll to continue]</h5>
                 </div>
-            </div>          
+                <div className='splash-text'>
+                    <h1>Tom Leslie Li</h1>
+                    <div className='languages'>
+                        <h4>{languages[languageIndex]}</h4>
+                    </div>
+                </div>   
+            </div>       
             <div id='splash-5' className='splash-asset'>
                 <Splash5/>
             </div>

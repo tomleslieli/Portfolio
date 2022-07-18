@@ -23,27 +23,29 @@ img {
 
 .main-1 {
     min-height: 100vh;
-    min-width: 100%;
+    min-width: auto;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     margin: none;
 }
 
 .main-2 {
-    margin-top: -20px;
     display: block;
-    z-index: 20;
+    position: relative;
+    z-index: 13;
     min-height: 100vh;
     min-width: 100%;
+    max-width: 100%;
     background-color: #0f2d30;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
+    overflow-x: hidden;
     margin: none;
     color: #ffddd1;
 }

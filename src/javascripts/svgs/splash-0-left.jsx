@@ -4,7 +4,7 @@
                 viewBox="0 0 1920.000000 1080.000000"
                 preserveAspectRatio="xMidYMid meet">
                     
-                <g transform="translate(0.000000,1060.000000) scale(0.100000,-0.100000)"
+                <g transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
                 fill="#0c2426" stroke="none">
 
                 <path class='shift' d="M0 9596 c0 -1058 2 -1205 15 -1216 8 -7 15 -23 15 -36 0 -37 16 -69

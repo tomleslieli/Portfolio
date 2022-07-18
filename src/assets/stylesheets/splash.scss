@@ -2,41 +2,52 @@
     z-index: 5;
     position: absolute;
     min-width: 100%;
-    overflow-y: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
 }
 
 .splash-asset-border {
-    z-index: 7;
+    z-index: 8;
     position: absolute;
     min-width: 100%;
+    overflow-y: hidden;
     overflow-x: hidden;
-    top: 10px;
     display: flex;
     justify-content: center;
+    margin-top: 70px;
 }
 
 .splash-asset > svg {
-    z-index: 5;
     min-height: 100vh;
     min-width: 100%;
 }
 
 .splash-asset-border > svg{
     min-height: 100vh;
-    // min-width: 100%;
+    min-width: 100%;
 }
 
 .splash-text {
     position: fixed;
-    z-index: 6;
-    margin-top: -550px;
+    z-index: 5;
+    // margin-bottom: 50px;
+    // margin-left: 50%;
+    // margin-right: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ffddd1;
+}
+
+.splash-center-container {
+    min-width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .languages > h4 {
@@ -91,7 +102,21 @@
     position: absolute;
 }
 
+#splash-0-left {
+    top: -10px;
+}
+
+#splash-0-right {
+    top: -10px;
+}
+
+#splash-1 {
+    z-index: 12;
+    top: -68px
+}
+
 #splash-3 {
+    z-index: 11;
     top: -65px;
 }
 
@@ -109,28 +134,30 @@
 
 .splash-background {
     position: fixed;
-    background: linear-gradient(#f79a8a, #303967);
-    min-height: 300vh;
-    min-width: 100%;
+    background: linear-gradient(to right, #f79a8a, #303967);
+    min-height: 100vh;
+    min-width: 350%;
+    overflow-x: hidden;
     top: 0px;
 }
 
 .splash-stars {
     position: absolute;
-    min-height: 80vh;
+    min-height: 100vh;
     max-height: 80vh;
-    left: -600px;
-    top: 200px;
+    left: -1100px;
 }
 
 .splash-circle {
     z-index: 5;
-    position: fixed;
+    position: relative;
     background-color: #ffddd1;
     min-width: 250px;
     min-height: 250px;
     border-radius: 1000px;
-    top: 330px;
+    top: 250px;
+    margin-left: 50%;
+    margin-right: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,10 +183,10 @@
 }
 
 .splash-birds {
-    z-index: 4;
-    position: relative;
-    top: -400px;
-    left: 1000px;
+    z-index: 10;
+    position: absolute;
+    top: 775px;
+    left: 2500px;
     animation: flying 10s linear
 }
 
@@ -168,6 +195,6 @@
 }
 
 @keyframes flying {
-    0%{ left: 1000px }
+    0%{ left: 2500px }
     100%{ left: -1000px }
 }
