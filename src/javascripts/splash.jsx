@@ -1,5 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 import '../assets/stylesheets/splash.scss'
+import Splash0Left from './svgs/splash-0-left.jsx'
+import Splash0Right from './svgs/splash-0-right.jsx'
+import Splash1 from './svgs/splash-1.jsx'
+import Splash2 from './svgs/splash-2.jsx'
+import Splash3 from './svgs/splash-3.jsx'
+import Splash4 from './svgs/splash-4.jsx'
+import Splash5 from './svgs/splash-5.jsx'
 
 function Splash() {
     const [scrollTop, setScrollTop] = useState(0);
@@ -69,12 +76,11 @@ function Splash() {
         splash3.style.top = -65 + scrollValue * .25 + 'px';
         splash2.style.left = '-' + scrollValue * 0.15 + 'px';
         splash2.style.top = 10 + scrollValue * .3 + 'px';
-        splash1.style.width = scrollValue + 'px';
         splash0left.style.left = '-' + scrollValue * 0.5 + 'px';
         splash0left.style.top = -10 - scrollValue * 0.2 + 'px';
         splash0right.style.left = scrollValue * 0.5 + 'px';
         splash0right.style.top = -10 - scrollValue * 0.2 + 'px';
-        splashCircle.style.top = 375 + scrollValue * 2 + 'px';
+        splashCircle.style.top = 325 + scrollValue * 2 + 'px';
         splashBackground.style.top = '-' + scrollValue * 3 + 'px';
         splashStars.style.left = -600 - scrollValue * 3 + 'px';
         splashStars.style.top = 200 - scrollValue * 0.5 + 'px';
@@ -88,7 +94,7 @@ function Splash() {
                 <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-stars.png' alt='splash-stars'/>
             </div>
             <div id='splash-circle' className='splash-circle'>
-                <h5>scroll to continue</h5>
+                <h5>[scroll to continue]</h5>
             </div>
             <div className='splash-text'>
                 <h1>Tom Leslie Li</h1>
@@ -97,25 +103,25 @@ function Splash() {
                 </div>
             </div>          
             <div id='splash-5' className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-5.png' alt='splash-5'/>
+                <Splash5/>
             </div>
             <div id='splash-4'className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-4.png' alt='splash-4'/>
+                <Splash4/>
             </div>
             <div id='splash-3'className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-3.png' alt='splash-3'/>
+                <Splash3/>
             </div>
             <div id='splash-2'className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-2.png' alt='splash-2'/>
+                <Splash2/>
             </div>
             <div id='splash-1' className='splash-asset-border'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-1.png' alt='splash-1'/>
+                <Splash1/>
             </div>
             <div id='splash-0-right' className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-0-right.png' alt='splash-0-right'/>
+                <Splash0Right/>
             </div>
             <div id='splash-0-left'className='splash-asset'>
-                <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-0-left.png' alt='splash-0-left'/>
+                <Splash0Left/>
             </div>
             <div className='splash-birds'>
                 <img src='https://tomleslieli-portfolio.s3.amazonaws.com/splash-birds.gif' alt='splash-birds'/>

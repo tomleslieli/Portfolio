@@ -33,6 +33,7 @@ img {
 }
 
 .main-2 {
+    margin-top: -20px;
     display: block;
     z-index: 20;
     min-height: 100vh;

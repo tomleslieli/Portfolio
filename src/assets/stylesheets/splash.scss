@@ -3,6 +3,8 @@
     position: absolute;
     min-width: 100%;
     overflow-y: none;
+    display: flex;
+    justify-content: center;
 }
 
 .splash-asset-border {
@@ -11,17 +13,25 @@
     min-width: 100%;
     overflow-x: hidden;
     top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.splash-asset > img {
+.splash-asset > svg {
     z-index: 5;
+    min-height: 100vh;
     min-width: 100%;
+}
+
+.splash-asset-border > svg{
+    min-height: 100vh;
+    // min-width: 100%;
 }
 
 .splash-text {
     position: fixed;
     z-index: 6;
-    margin-top: -500px;
+    margin-top: -550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +41,7 @@
 
 .languages > h4 {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 400;
     font-family: 'Share Tech Mono', monospace;
@@ -55,7 +65,7 @@
 }
 
 .splash-text > h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 700;
     overflow: hidden;
     border-right: .08em solid rgb(255, 255, 255); 
@@ -120,12 +130,12 @@
     min-width: 250px;
     min-height: 250px;
     border-radius: 1000px;
-    top: 375px;
+    top: 330px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #f79a8a;
     font-size: 12px;
     font-weight: 700;
 }
