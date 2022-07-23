@@ -12,21 +12,21 @@ function NavBar() {
             </div>
             <div className='navbar-right'>
                 <a href='https://linkedin.com/in/tomleslieli/'>
-                    <button>
+                    <button className='nav-button'>
                         <div className='button-logo'>
                             <img src='https://tomleslieli-portfolio.s3.amazonaws.com/linkedin-logo.png' alt='linkedin-logo'/>
                         </div>
                     </button>
                 </a>
                 <a href='https://github.com/tomleslieli'>
-                    <button>
+                    <button className='nav-button'>
                         <div className='button-logo'>
                             <img src='https://tomleslieli-portfolio.s3.amazonaws.com/github-logo.png' alt='github-logo'/>
                         </div>
                     </button>
                 </a>
                 <a href={`mailto:tomleslieli@yahoo.com?subject=${subject}&body=${body}`}>
-                    <button>
+                    <button className='nav-button'>
                         <div className='button-logo'>
                             <img src='https://tomleslieli-portfolio.s3.amazonaws.com/email-icon.png' alt='email-icon'/>
                         </div>
