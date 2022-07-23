@@ -7,6 +7,7 @@ function Video() {
     
     const [currentVideo, setCurrentVideo] = useState('phonyppl')
     const [sideBarOpen, setSideBarOpen] = useState(true)
+    const [isMuted, setIsMuted] = useState(true)
 
     const videos = {
         tobeginagain: 'https://tomleslieli-portfolio.s3.amazonaws.com/ingrid_michaelson%2C_zayn_-_to_begin_again_(official_video)+(1080p).mp4',
@@ -17,6 +18,16 @@ function Video() {
 
     const video = document.querySelector('.video-project');
 
+    useEffect(() => {
+        if (video) {
+            if (!video.muted){
+                video.muted = true;
+            } 
+            else {
+                video.muted = false;
+            }
+        }
+    }, [isMuted])
 
     return (
         <>
@@ -27,7 +38,7 @@ function Video() {
         </div>
         <div className='video-projects'>
             <div className='video-projects-header'>
-                <h1>Video Production</h1>
+                {/* <h1>Video Production</h1> */}
             </div>
             <div className='open-side-bar-container'>
                 <div className='open-side-bar'>
@@ -47,6 +58,9 @@ function Video() {
                     <div className='trans-bar'>
 
                     </div>
+                    <div className='video-production-title'>
+                        {/* <h1>VIDEO PRODUCTION</h1> */}
+                    </div>
                     <button className='video-button' onClick={() => setCurrentVideo('phonyppl')}>
                         <img src='https://tomleslieli-portfolio.s3.amazonaws.com/phony-ppl.png' alt='phony-ppl-logo'/>
                     </button>
@@ -59,13 +73,17 @@ function Video() {
                     <button className='video-button' onClick={() => setCurrentVideo('axtone')}>
                         <img src='https://tomleslieli-portfolio.s3.amazonaws.com/axtone.png' alt='axtone-logo'/>
                     </button>
-                    <button className='mute-button'>
-                        
+                    <button className='mute-button' onClick={() => setIsMuted(!isMuted)}>
+                        {
+                            isMuted ? 
                             <i id='caret-one' className="fa-solid fa-volume-xmark fa-xl"></i>
+                            : 
                             <i className="fa-solid fa-volume-high fa-xl"></i>
-                        
+                        }
                     </button>
-                    <h5 className='close-side-bar' onClick={() => setSideBarOpen(false)}>HIDE SIDEBAR</h5>
+                    <div className='close-side-bar'>
+                        <h5 onClick={() => setSideBarOpen(false)}>HIDE SIDEBAR</h5>
+                    </div>
                 </div>
                 : <></>
             }
