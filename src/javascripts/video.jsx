@@ -18,6 +18,8 @@ function Video() {
 
     const video = document.querySelector('.video-project');
 
+    useEffect(() => console.log('Video Mounted'), []);
+
     useEffect(() => {
         if (video) {
             if (!video.muted){

@@ -56,7 +56,8 @@
 }
 
 .languages {
-    animation: slideIn 1s ease-out 0s infinite normal, fadeIn 1s ease-out infinite normal;
+    opacity: 0%;
+    animation: slideIn 1s ease-out 0s infinite normal, fadeIn 1s infinite normal;
     position: relative;
 }
 
@@ -66,9 +67,11 @@
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0%}
+    0% {opacity: 50%}
+    25% {opacity: 50%}
     50% {opacity: 100%}
-    85% {opacity: 100%}
+    80% {opacity: 100%}
+    90% {opacity: 50%}
     100% {opacity: 0%}
 }
 

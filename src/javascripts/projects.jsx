@@ -17,6 +17,9 @@ function Projects() {
         linealert: 'https://tomleslieli-portfolio.s3.amazonaws.com/linealert.mp4',
         rick: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     }
+
+    useEffect(() => console.log('Projects Mounted'), []);
+
     return (
         <>
             <div className='projects-header'>

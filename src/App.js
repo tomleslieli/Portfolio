@@ -2,6 +2,7 @@ import './assets/stylesheets/App.css';
 import Splash from './javascripts/splash.jsx'
 import Projects from './javascripts/projects.jsx'
 import Video from './javascripts/video.jsx'
+import Hobbies from './javascripts/hobbies.jsx'
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
       </div>
       <div className='main-3'>
         <Video />
+      </div>
+      <div className='main-4'>
+        <Hobbies />
       </div>
     </div>
   );

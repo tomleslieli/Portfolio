@@ -63,6 +63,19 @@ img {
     overflow-y: hidden;
     overflow-x: hidden;
     margin-top: 110vh;
-    color: #ffddd1;
+    color: #0f2d30;
     object-fit: fill;
+}
+
+.main-4 {
+    z-index: 30;
+    min-height: 100vh;
+    background-color: #ffddd1;
+    min-width: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin: none;
 }

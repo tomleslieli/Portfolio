@@ -1,0 +1,137 @@
+.hobbies-layer {
+    z-index: 30;
+    position: absolute;
+    min-width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    animation: itemSlideIn 1s ease-out, itemFadeIn 1s ease-out;
+}
+
+.items-item {
+    animation: itemSlideIn 1.5s ease-out, itemFadeIn 1.5s ease-out;
+    min-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes itemSlideIn {
+    0%{transform: translate(0px,-5px)}
+    100%{transform: translate(0px,0px)}
+}
+
+@keyframes itemFadeIn {
+    0%{opacity: 0%}
+    100%{opacity: 100%}
+}
+
+.hobbies-layer > svg {
+    min-width: 100%;
+}
+
+.hobbies-right {
+    z-index: 100;
+    min-height: 100vh;
+    min-width: 50%;
+    max-width: 50%;
+    margin-left: 50%;
+    background-color: #2f3e46;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+}
+
+.placeholder {
+    min-width: 30%;
+}
+
+.hobbies-buttons {
+    z-index: 1500;
+    min-width: 80px;
+    max-width: 80px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    left: -10px;
+}
+
+.hobbies-buttons > button {
+    border: none;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffddd1;
+    font-size: 14px;
+    font-weight: 600;
+    max-height: 3vh;
+    min-height: 3vh;
+    min-width: 80px;
+    border-radius: 1px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color .2s ease, color .15s ease, transform .2s ease, margin-left .5s ease-out;
+}
+
+.hobbies-buttons > button > i {
+    position: relative;
+    left: 4px;
+}
+
+.hobbies-buttons > button:hover {
+    color: #0f2d30;
+    background-color: #ffddd1;
+    margin-left: -2px;
+}
+
+.hobbies-buttons > button:active {
+    color: #ff9b77;
+    transform: translate(-1px,0px);
+}
+
+.hobbies-descriptions {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    z-index: 34;
+    fill: #2f3e46;
+    opacity: 0%;
+    display: none;
+}
+
+#white-top {
+    z-index: 34;
+    opacity: 0%;
+    display: none;
+}
+
+#white-mid {
+    z-index: 34;
+    opacity: 0%;
+    display: none;
+}
+
+#orange {
+    z-index: 35;
+    opacity: 0%;
+}
+
+#light-red {
+    z-index: 34;
+}
