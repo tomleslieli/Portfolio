@@ -15,7 +15,6 @@ function Projects() {
         beatbox: 'https://tomleslieli-portfolio.s3.amazonaws.com/beatbox.mp4',
         roobinhud: 'https://tomleslieli-portfolio.s3.amazonaws.com/default.mp4',
         linealert: 'https://tomleslieli-portfolio.s3.amazonaws.com/linealert.mp4',
-        rick: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     }
 
     useEffect(() => console.log('Projects Mounted'), []);
@@ -83,8 +82,8 @@ function Projects() {
                             <h3 onClick={() => setCurrentVideo('beatbox')}>BeatBox</h3> 
                             <p> Built entirely in vanilla JavaScript, BeatBox is a four-channel audio mixing interface that allows users to load and manipulate tracks with features such as loops and hotcues. </p>
                             <div className='project-links'>
-                                <a href='https://tomleslieli.github.io/BeatBox' target='_blank'>Live Link</a>
-                                <a href='https://github.com/tomleslieli/BeatBox'target='_blank'>GitHub</a>
+                                <a href='https://tomleslieli.github.io/BeatBox' target='_blank' rel='noreferrer'>Live Link</a>
+                                <a href='https://github.com/tomleslieli/BeatBox'target='_blank' rel='noreferrer'>GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -93,8 +92,8 @@ function Projects() {
                             <h3 onClick={() => setCurrentVideo('roobinhud')}>Roobinhüd</h3> 
                             <p>Roobinhüd is a (Robinhood clone) stock trading application that allows users to view / trade stocks with real time data and price charts.</p>
                             <div className='project-links'>
-                                <a href=''>Live Link</a>
-                                <a href='https://github.com/tomleslieli/Roobinhud'>GitHub</a>
+                                <a href='https://roobinhud.herokuapp.com' target='_blank'>Live Link</a>
+                                <a href='https://github.com/tomleslieli/Roobinhud' target='_blank' rel='noreferrer'>GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -103,8 +102,8 @@ function Projects() {
                             <h3 onClick={() => setCurrentVideo('linealert')}>LineAlert</h3> 
                             <p>LineAlert is a NYC-based subway alert application where users can create live alerts to notify other users of subway hazards, delays, and other suspicious activity.</p>
                             <div className='project-links'>
-                                <a href='https://aa-linealert.herokuapp.com/'>Live Link</a>
-                                <a href='https://github.com/leochung97/LineAlert'>GitHub</a>
+                                <a href='https://aa-linealert.herokuapp.com/' target='_blank' rel='noreferrer'>Live Link</a>
+                                <a href='https://github.com/leochung97/LineAlert' target='_blank' rel='noreferrer'>GitHub</a>
                             </div>
                         </div>
                     </div>
