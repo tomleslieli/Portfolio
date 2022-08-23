@@ -36,6 +36,26 @@ function Video() {
     }
   }, [isMuted]);
 
+  const setPhony = () => {
+    setCurrentVideo("phonyppl");
+    setIsMuted(true);
+  }
+
+  const setToBegin = () => {
+    setCurrentVideo("tobeginagain");
+    setIsMuted(true); 
+  }
+
+  const setAthletix = () => {
+    setCurrentVideo("athletix");
+    setIsMuted(true); 
+  }
+
+  const setAxtone = () => {
+    setCurrentVideo("axtone");
+    setIsMuted(true); 
+  }
+
   return (
     <>
       <div className="transition-container">
@@ -68,7 +88,7 @@ function Video() {
             </div>
             <button
               className="video-button"
-              onClick={() => setCurrentVideo("phonyppl")}
+              onClick={() => setPhony()}
             >
               <img
                 src="https://tomleslieli-portfolio.s3.amazonaws.com/phony-ppl.png"
@@ -77,7 +97,7 @@ function Video() {
             </button>
             <button
               className="video-button"
-              onClick={() => setCurrentVideo("tobeginagain")}
+              onClick={() => setToBegin()}
             >
               <img
                 src="https://tomleslieli-portfolio.s3.amazonaws.com/tobeginagain.png"
@@ -86,7 +106,7 @@ function Video() {
             </button>
             <button
               className="video-button"
-              onClick={() => setCurrentVideo("athletix")}
+              onClick={() => setAthletix()}
             >
               <img
                 src="https://tomleslieli-portfolio.s3.amazonaws.com/athletix.png"
@@ -95,7 +115,7 @@ function Video() {
             </button>
             <button
               className="video-button"
-              onClick={() => setCurrentVideo("axtone")}
+              onClick={() => setAxtone()}
             >
               <img
                 src="https://tomleslieli-portfolio.s3.amazonaws.com/axtone.png"

@@ -14,6 +14,29 @@ import WhiteMid from "./svgs/white-mid.jsx";
 
 function Hobbies() {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [allArr, setAllArr] = useState([]);
+  const [allClicked, setAllClicked] = useState(false);
+
+  useEffect(() => {
+    if (selectedItem === 'items-photos' && !allArr.includes('items-photos')){
+      setAllArr((oldArr) => [...oldArr, 'items-photos']);
+    }
+    if (selectedItem === 'items-music' && !allArr.includes('items-music')){
+      setAllArr((oldArr) => [...oldArr, 'items-music']);
+    }
+    if (selectedItem === 'items-climbing' && !allArr.includes('items-climbing')){
+      setAllArr((oldArr) => [...oldArr, 'items-climbing']);
+    }
+    if (selectedItem === 'items-snowboard' && !allArr.includes('items-snowboard')){
+      setAllArr((oldArr) => [...oldArr, 'items-snowboard']);
+    }
+  }, [selectedItem])
+
+  useEffect(() => {
+    if (allArr.includes('items-photos') && allArr.includes('items-music') && allArr.includes('items-climbing') && allArr.includes('items-snowboard')) {
+      setAllClicked(true)
+    }
+  }, [allArr])
 
   useEffect(() => {
     if (selectedItem) {
@@ -41,6 +64,16 @@ function Hobbies() {
   return (
     <>
       <div className="hobbies-left">
+        <div className='thank-you-container'>
+          {
+            allClicked ? 
+            <>
+              <div className='thank-you'>
+                <h3>Thank you for visiting my portfolio!</h3>
+              </div>
+            </> : <></>
+          }
+        </div>
         <div id="blue" className="hobbies-layer">
           <Blue />
         </div>
@@ -111,7 +144,24 @@ function Hobbies() {
           )}
         </div>
         <div className="hobbies-descriptions">
-          {selectedItem === null ? <>Hello</> : <></>}
+          {selectedItem === null ? (
+            <>
+              <div className="items-item">
+                <div className="music-text" id="hobbies-text">
+                  <h2>Hobbies</h2>
+                  <h3>
+                    Over the years, I've accumulated a handful of interests & hobbies.
+                  </h3>
+                  <h3>
+                    These are my go-tos to decompress, and have become an integral part of my life.
+                  </h3>
+                  <h5>(Use the tabs below)</h5>
+                </div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
           {selectedItem === "items-photos" ? (
             <div className="items-item-collage">
               <img
@@ -135,16 +185,17 @@ function Hobbies() {
                 <iframe
                   width="70%"
                   title="soundcloud-player"
-                  height="335px"
+                  height="275px"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1473581347&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false&sharing=false"></iframe>
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1473581347&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false&sharing=false"
+                ></iframe>
               </div>
               <div className="items-item">
                 <div className="music-text">
-                  <h5 className="border-box-music" id='throughout-college'>
-                    These projects span my college career. It's super interesting to see how my style has changed throughout the years.{" "}
+                  <h5 className="border-box-music" id="throughout-college">
+                    These projects span my college career and result from my interest in composition & sound design.{" "}
                   </h5>
                 </div>
               </div>
@@ -157,16 +208,19 @@ function Hobbies() {
                 <iframe
                   width="70%"
                   title="soundcloud-player"
-                  height="335px"
+                  height="275px"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1479437002%3Fsecret_token%3Ds-8DEJ0ncbpUh&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false"                ></iframe>
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1479437002%3Fsecret_token%3Ds-8DEJ0ncbpUh&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false"
+                ></iframe>
               </div>
               <div className="items-item">
                 <div className="music-text">
-                  <h5 className="border-box-music" id='throughout-college'>
-                    Here are a few short clips of the (many) random ideas I've come up with. These were all created in Ableton Live Pro 11 after switching over from Logic Pro X.
+                  <h5 className="border-box-music" id="throughout-college">
+                    Here are a few short clips of the (many) random ideas I've
+                    come up with. These were all created in Ableton Live Pro 11
+                    after switching over from Logic Pro X.
                   </h5>
                 </div>
               </div>
