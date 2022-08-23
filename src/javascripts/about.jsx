@@ -5,6 +5,11 @@ import Yellow from "./svgs/yellow.jsx";
 import LightGrey from "./svgs/light-grey.jsx";
 import DarkGrey from "./svgs/dark-grey.jsx";
 import Cart from "./svgs/cart.jsx";
+import Tools from "./svgs/tools.jsx";
+import RocksOne from "./svgs/rocks-one.jsx";
+import RocksTwo from "./svgs/rocks-two.jsx";
+import RocksThree from "./svgs/rocks-three.jsx";
+
 
 function About() {
   return (
@@ -13,7 +18,7 @@ function About() {
         <div className="about-left">
           <div className="about-item">
             <h5>
-              I'm a 27 year old <span className="bold">software engineer</span>
+              I'm a <span className="bold">software engineer</span>
             </h5>
             <h5>
               {" "}
@@ -89,14 +94,26 @@ function About() {
       <div className="about-asset">
         <DarkBlue />
       </div>
+      <div className="about-asset-cart">
+        <Cart />
+      </div>
+      <div className="about-asset-cart">
+        <RocksOne />
+      </div>
+      <div className="about-asset-cart">
+        <RocksTwo />
+      </div>
+      <div className="about-asset-cart">
+        <RocksThree />
+      </div>
+      <div className="about-asset">
+        <Tools />
+      </div>
       <div className="about-asset">
         <Yellow />
       </div>
       <div className="about-asset">
         <LightGrey />
-      </div>
-      <div className="about-asset">
-        <Cart />
       </div>
       <div className="about-asset">
         <DarkGrey />

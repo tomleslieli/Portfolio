@@ -4,7 +4,7 @@
             viewBox="0 0 1920.000000 1080.000000"
             preserveAspectRatio="xMidYMid meet">
 
-            <g transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
+            <g transform="translate(0.000000,1082.000000) scale(0.100000,-0.100000)"
             fill="#fff5f0" stroke="none">
 <path d="M5150 9360 c0 -6 28 -10 65 -10 37 0 65 4 65 10 0 6 -28 10 -65 10
 -37 0 -65 -4 -65 -10z"/>

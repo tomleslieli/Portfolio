@@ -11,14 +11,29 @@
 
 .items-item {
     animation: itemSlideIn 1.5s ease-out, itemFadeIn 1.5s ease-out;
-    min-width: 80%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.items-item-collage {
+    z-index: 80;
+    animation: itemSlideIn 1.5s ease-out, itemFadeIn 1.5s ease-out;
+    min-width: 100%;
+    // max-width: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-item-collage:hover {
+    opacity: 35%;
+}
+
 @keyframes itemSlideIn {
-    0%{transform: translate(0px,-5px)}
+    0%{transform: translate(0px,-10px)}
     100%{transform: translate(0px,0px)}
 }
 
@@ -31,8 +46,16 @@
     min-width: 100%;
 }
 
+.hobbies-left {
+    z-index: 200;
+    min-width: 50%;
+    min-height: 100vh;
+    background-color: #ffddd1;
+    display: flex;
+    align-items: center;
+}
+
 .hobbies-right {
-    z-index: 100;
     min-height: 100vh;
     min-width: 50%;
     max-width: 50%;
@@ -42,7 +65,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    position: relative;
+    position: absolute;
 }
 
 .placeholder {
@@ -99,8 +122,20 @@
 }
 
 .hobbies-descriptions {
+    cursor: default;
     min-height: 100%;
     min-width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hobbies-descriptions-text {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -134,4 +169,174 @@
 
 #light-red {
     z-index: 34;
+}
+
+.photos-collage {
+    min-width: 4000px;
+    object-fit: contain;
+    animation: collageSlide 60s ease infinite;
+}
+
+@keyframes collageSlide {
+    0%{transform: translate(-30px,3700px)}
+    4%{transform: translate(-30px,3700px)}
+
+    6%{transform: translate(-1000px,3700px)}
+    10%{transform: translate(-1000px,3700px)}
+
+    12%{transform: translate(-2000px,3700px)}
+    16%{transform: translate(-2000px,3700px)}
+
+    18%{transform: translate(-3030px,3700px)}
+    22%{transform: translate(-3030px,3700px)}
+
+    24%{transform: translate(-3030px,2400px)}
+    28%{transform: translate(-3030px,2400px)}
+
+    30%{transform: translate(-2000px,2400px)}
+    34%{transform: translate(-2000px,2400px)}
+
+    36%{transform: translate(-1000px,2400px)}
+    40%{transform: translate(-1000px,2400px)}
+
+    42%{transform: translate(-30px,2400px)}
+    46%{transform: translate(-30px,2400px)}
+
+    48%{transform: translate(-30px, 1300px)}
+    52%{transform: translate(-30px, 1300px)}
+
+    54%{transform: translate(-1000px, 1300px)}
+    58%{transform: translate(-1000px, 1300px)}
+
+    60%{transform: translate(-2000px, 1300px)}
+    64%{transform: translate(-2000px, 1300px)}
+
+    66%{transform: translate(-3030px, 1300px)}
+    70%{transform: translate(-3030px, 1300px)}
+
+    72%{transform: translate(-3030px, 100px)}
+    76%{transform: translate(-3030px, 100px)}
+
+    78%{transform: translate(-2000px, 100px)}
+    82%{transform: translate(-2000px, 100px)}
+
+    84%{transform: translate(-1000px, 100px)}
+    88%{transform: translate(-1000px, 100px)}
+
+    90%{transform: translate(-30px, 100px)}
+    94%{transform: translate(-30px, 100px)}
+
+    100%{transform: translate(-30px,3700px)}
+
+}
+
+.photos-text {
+    z-index: 500;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffddd1;
+    font-family: "Share Tech Mono", monospace;
+    background-color: #1d2728b9;
+    transition: background-color .5s ease-out, color .2s ease-out;
+    cursor: default;
+    line-height: 30px;
+}
+
+.border-box {
+    margin-left: 17%;
+    margin-right: 15%;
+}
+
+.border-box-music {
+    margin-left: 17%;
+    margin-right: 15%;
+}
+
+.photos-text:hover {
+    background-color: #1d272800;
+    color: rgb(255, 255, 255, 0);
+}
+
+.photos-text > h2 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+
+.photos-text > h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.photos-text > h6 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.music-text {
+    z-index: 500;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffddd1;
+    font-family: "Share Tech Mono", monospace;
+    transition: background-color .5s ease-out, color .2s ease-out;
+    cursor: default;
+    line-height: 18px;
+    animation: musicSlideIn 1.5s ease;
+}
+
+@keyframes musicSlideIn {
+    0%{transform: translate(0px, 15px)}
+    100%{transform: translate(0px, 0px)}
+}
+
+.music-text > h2 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.music-text > h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.music-text > h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.items-item > iframe {
+    z-index: 1500;
+}
+
+#throughout-college {
+    margin-top: 10px;
+}
+
+.music-text > h6 {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }

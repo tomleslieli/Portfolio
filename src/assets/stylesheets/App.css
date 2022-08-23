@@ -84,7 +84,6 @@ img {
 .main-4 {
     z-index: 30;
     min-height: 100vh;
-    background-color: #ffddd1;
     min-width: auto;
     position: relative;
     display: flex;

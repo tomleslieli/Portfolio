@@ -15,13 +15,31 @@
   justify-content: center;
 }
 
-.about-asset {
+.about-asset-cart {
   position: absolute;
-  min-width: 100%;
+  min-height: 540px;
+  min-width: 1920px;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
+  animation: cartSlideOut 15s ease infinite;
+}
+
+.about-asset-cart > svg {
+  position: absolute;
+}
+
+@keyframes cartSlideOut {
+  0% {
+    margin-left: 0px;
+  }
+  80% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 2000px;
+  }
 }
 
 .about-asset-bg {
@@ -52,7 +70,7 @@
 }
 
 .light-grey {
-  z-index: 900;
+  z-index: 800;
 }
 
 .dark-grey {
@@ -60,8 +78,87 @@
   transform-origin: -50% -50%;
 }
 
+.tools {
+  z-index: 850;
+}
+
+.rocks-one {
+  z-index: 850;
+  animation: rockFallSmallSmall 15s ease-in infinite;
+}
+
+.rocks-two {
+  z-index: 850;
+  animation: rockFall 15s ease-in infinite;
+}
+
+.rocks-three {
+  z-index: 850;
+  animation: rockFallSmall 15s ease-in infinite;
+}
+
+@keyframes rockFall {
+  0% {
+    transform: translate(-20px, -200px);
+  }
+  65% {
+    transform: translate(-20px, -200px);
+  }
+  73% {
+    transform: translate(-20px, 203px);
+  }
+  74% {
+    transform: translate(-20px, 206px);
+  }
+  75% {
+    transform: translate(-20px, 205px);
+  }
+  80% {
+    transform: translate(-20px, 205px);
+  }
+  100% {
+    transform: translate(-20px, 205px);
+  }
+}
+
+@keyframes rockFallSmall {
+  0% {
+    transform: translate(10px, -200px);
+  }
+  66% {
+    transform: translate(10px, -200px);
+  }
+  75% {
+    transform: translate(10px, 375px);
+  }
+  80% {
+    transform: translate(10px, 375px);
+  }
+  100% {
+    transform: translate(10px, 375px);
+  }
+}
+
+@keyframes rockFallSmallSmall {
+  0% {
+    transform: translate(20px, -150px);
+  }
+  65% {
+    transform: translate(20px, -150px);
+  }
+  76% {
+    transform: translate(20px, 330px);
+  }
+  80% {
+    transform: translate(20px, 330px);
+  }
+  100% {
+    transform: translate(20px, 330px);
+  }
+}
+
 .cart {
-  z-index: 900;
+  z-index: 825;
   animation: cartSlideIn 15s ease infinite, cartWobble 15s infinite;
   transform-origin: center;
 }
@@ -80,7 +177,7 @@
     transform: translate(0px, 0px);
   }
   100% {
-    transform: translate(2000px, 0px);
+    transform: translate(0px, 0px);
   }
 }
 
