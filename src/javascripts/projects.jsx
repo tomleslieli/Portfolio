@@ -17,8 +17,6 @@ function Projects() {
         linealert: 'https://tomleslieli-portfolio.s3.amazonaws.com/linealert.mp4',
     }
 
-    useEffect(() => console.log('Projects Mounted'), []);
-
     return (
         <>
             <div className='projects-header'>

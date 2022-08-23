@@ -322,17 +322,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   color: #ffddd1;
   font-family: "Share Tech Mono", monospace;
   background-color: #1d2728b9;
   transition: background-color 0.5s ease-out, color 0.2s ease-out;
   cursor: default;
   line-height: 30px;
-}
-
-.photos-text > h2 {
-  animation: musicSlideIn 1.5s ease;
 }
 
 .border-box {
@@ -344,6 +340,25 @@
 .border-box-music {
   margin-left: 15%;
   margin-right: 13%;
+  transition: background-color 0.5s ease-out, color 0.2s ease-out;
+}
+.border-box-music:hover {
+  color: #ffcbb8;
+}
+
+.music-text > h2 {
+  transition: background-color 0.5s ease-out, color 0.2s ease-out;
+}
+
+.music-text > h3 {
+  transition: background-color 0.5s ease-out, color 0.2s ease-out;
+}
+
+.music-text > h2:hover {
+  color: #ffcbb8;
+}
+.music-text > h3:hover {
+  color: #ffcbb8;
 }
 
 .photos-text:hover {
@@ -355,6 +370,24 @@
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 35px;
+  animation: musicSlideIn 1.5s ease;
+}
+
+.photos-text-title {
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+}
+
+#climbing-title {
+  font-size: 33px;
+}
+
+.photos-text-title > h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 35px;
+  animation: musicSlideIn 1.5s ease;
 }
 
 .photos-text > h5 {
@@ -576,3 +609,10 @@
   border-radius: 2px;
   animation: itemSlideIn .75s ease, itemFadeIn .75s ease;
 }
+
+#climbing-bullets {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+

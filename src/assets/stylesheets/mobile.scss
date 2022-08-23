@@ -20,15 +20,35 @@
 
 #runs-best {
   color: rgb(27, 27, 27);
-  max-width: 400px;
+  max-width: 340px;
   max-height: 50px;
   padding: 10px;
+  margin-top: -60px;
+  position: absolute;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   border-radius: 5px;
+  animation: noticeSlideIn 2s ease-out, noticeFadeIn 2s ease-out;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  
+}
+
+#runs-best:hover {
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+
+@keyframes noticeSlideIn {
+  0%{transform: translate(-50px, 0px)}
+  100%{transform: translate(0px, 0px)}
+}
+
+@keyframes noticeFadeIn {
+  0%{opacity: 0%}
+  100%{opacity: 100%}
 }
 
 #sixteennine {
@@ -36,8 +56,8 @@
 }
 
 .mobile-item {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 75px;
+  margin-right: 75px;
 }
 
 .mobile-links-container {
@@ -95,4 +115,19 @@
 .mobile-item > h5 {
   font-size: 13px;
   font-weight: 400;
+}
+
+.close-mobile-button {
+  position: absolute;
+}
+
+.fa-circle-xmark {
+  margin-left: 328px;
+  margin-bottom: 31px;
+  cursor: pointer;
+}
+
+.fa-circle-xmark:hover {
+  color: #ff9b77;
+  transition: color 0.3s ease;
 }

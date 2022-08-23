@@ -11,14 +11,14 @@ function NavBar() {
                 </div>
             </div>
             <div className='navbar-right'>
-                <a href='https://linkedin.com/in/tomleslieli/'>
+                <a href='https://linkedin.com/in/tomleslieli/' target="_blank">
                     <button className='nav-button'>
                         <div className='button-logo'>
                             <img src='https://tomleslieli-portfolio.s3.amazonaws.com/linkedin-logo.png' alt='linkedin-logo'/>
                         </div>
                     </button>
                 </a>
-                <a href='https://github.com/tomleslieli'>
+                <a href='https://github.com/tomleslieli' target="_blank">
                     <button className='nav-button'>
                         <div className='button-logo'>
                             <img src='https://tomleslieli-portfolio.s3.amazonaws.com/github-logo.png' alt='github-logo'/>

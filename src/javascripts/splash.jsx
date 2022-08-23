@@ -26,8 +26,6 @@ function Splash() {
         'MongoDB'
     ]
 
-    useEffect(() => console.log('Splash Mounted'), []);
-
     function useInterval(cb, delay){
         const savedCb = useRef();
 
