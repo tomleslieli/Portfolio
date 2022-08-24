@@ -11,6 +11,7 @@
   font-family: "Share Tech Mono", monospace;
   font-size: 11px;
   cursor: default;
+  margin-top: 50px;
 }
 
 .mobile-contents {
@@ -20,12 +21,14 @@
 
 #runs-best {
   color: rgb(27, 27, 27);
-  max-width: 340px;
+  max-width: 175px;
+  min-width: 175px;
   max-height: 50px;
   padding: 10px;
   margin-top: -60px;
-  position: absolute;
-  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -33,7 +36,7 @@
   border-radius: 5px;
   animation: noticeSlideIn 2s ease-out, noticeFadeIn 2s ease-out;
   transition: background-color 0.4s ease, color 0.4s ease;
-  
+  opacity: 85%;
 }
 
 #runs-best:hover {
@@ -42,17 +45,26 @@
 }
 
 @keyframes noticeSlideIn {
-  0%{transform: translate(-50px, 0px)}
-  100%{transform: translate(0px, 0px)}
+  0% {
+    transform: translate(-50px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes noticeFadeIn {
-  0%{opacity: 0%}
-  100%{opacity: 100%}
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 #sixteennine {
   font-weight: 600;
+  max-width: 150px;
 }
 
 .mobile-item {
@@ -88,6 +100,12 @@
   margin-top: 20px;
 }
 
+@media (max-width: 600px) {
+  .mobile-item > h1 {
+    margin-top: 0px;
+  }
+}
+
 .mobile-item > h2 {
   font-size: 25px;
   font-weight: 500;
@@ -119,11 +137,16 @@
 
 .close-mobile-button {
   position: absolute;
+  max-width: 175px;
+  min-width: 175px;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 15px;
 }
 
 .fa-circle-xmark {
-  margin-left: 328px;
-  margin-bottom: 31px;
   cursor: pointer;
 }
 

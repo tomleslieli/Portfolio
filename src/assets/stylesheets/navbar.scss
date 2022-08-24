@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+@media (max-width: 750px) {
+    .navbar {
+        background-color: rgb(27, 27, 27);
+    }
+  }
+
 .navbar-left {
     min-height: 50px;
     max-height: 50px;

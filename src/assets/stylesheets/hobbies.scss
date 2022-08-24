@@ -182,7 +182,6 @@
 
 .photos-collage {
   object-fit: contain;
-  animation: collageSlide 60s ease infinite;
   position: absolute;
   // top:0px;
   // left:0px;
@@ -193,124 +192,6 @@
   // max-height:100%;
   transform: scale(0.3);
   height: auto;
-}
-
-@keyframes collageSlide {
-  // 0% {
-  //   transform: translate(-30px, 3700px);
-  // }
-  // 4% {
-  //   transform: translate(-30px, 3700px);
-  // }
-
-  // 6% {
-  //   transform: translate(-1000px, 3700px);
-  // }
-  // 10% {
-  //   transform: translate(-1000px, 3700px);
-  // }
-
-  // 12% {
-  //   transform: translate(-2000px, 3700px);
-  // }
-  // 16% {
-  //   transform: translate(-2000px, 3700px);
-  // }
-
-  // 18% {
-  //   transform: translate(-3030px, 3700px);
-  // }
-  // 22% {
-  //   transform: translate(-3030px, 3700px);
-  // }
-
-  // 24% {
-  //   transform: translate(-3030px, 2400px);
-  // }
-  // 28% {
-  //   transform: translate(-3030px, 2400px);
-  // }
-
-  // 30% {
-  //   transform: translate(-2000px, 2400px);
-  // }
-  // 34% {
-  //   transform: translate(-2000px, 2400px);
-  // }
-
-  // 36% {
-  //   transform: translate(-1000px, 2400px);
-  // }
-  // 40% {
-  //   transform: translate(-1000px, 2400px);
-  // }
-
-  // 42% {
-  //   transform: translate(-30px, 2400px);
-  // }
-  // 46% {
-  //   transform: translate(-30px, 2400px);
-  // }
-
-  // 48% {
-  //   transform: translate(-30px, 1300px);
-  // }
-  // 52% {
-  //   transform: translate(-30px, 1300px);
-  // }
-
-  // 54% {
-  //   transform: translate(-1000px, 1300px);
-  // }
-  // 58% {
-  //   transform: translate(-1000px, 1300px);
-  // }
-
-  // 60% {
-  //   transform: translate(-2000px, 1300px);
-  // }
-  // 64% {
-  //   transform: translate(-2000px, 1300px);
-  // }
-
-  // 66% {
-  //   transform: translate(-3030px, 1300px);
-  // }
-  // 70% {
-  //   transform: translate(-3030px, 1300px);
-  // }
-
-  // 72% {
-  //   transform: translate(-3030px, 100px);
-  // }
-  // 76% {
-  //   transform: translate(-3030px, 100px);
-  // }
-
-  // 78% {
-  //   transform: translate(-2000px, 100px);
-  // }
-  // 82% {
-  //   transform: translate(-2000px, 100px);
-  // }
-
-  // 84% {
-  //   transform: translate(-1000px, 100px);
-  // }
-  // 88% {
-  //   transform: translate(-1000px, 100px);
-  // }
-
-  // 90% {
-  //   transform: translate(-30px, 100px);
-  // }
-  // 94% {
-  //   transform: translate(-30px, 100px);
-  // }
-
-  // 100% {
-  //   transform: translate(-30px, 3700px);
-  // }
 }
 
 .photos-text {
@@ -607,7 +488,7 @@
   justify-content: center;
   color: #ffddd1;
   border-radius: 2px;
-  animation: itemSlideIn .75s ease, itemFadeIn .75s ease;
+  animation: itemSlideIn 0.75s ease, itemFadeIn 0.75s ease;
 }
 
 #climbing-bullets {
@@ -616,3 +497,21 @@
   margin-bottom: 0px;
 }
 
+.climbing-video {
+  // height: 100vh;
+  height: 100vh;
+  // width: auto;
+  transform: translate(-480px, 0px);
+  // animation: itemScaleOut 1.5s ease-out;
+}
+
+@media (max-width: 975px) {
+  .climbing-video {
+    transform: translate(-720px, 0px);
+  }
+}
+
+#climbing-video-item {
+  display: flex;
+  justify-content: center;
+}

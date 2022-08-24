@@ -140,8 +140,8 @@ function Hobbies() {
           {selectedItem === "items-photos" ? (
             <>
               <div className="photos-text">
-                <div className='photos-text-title'>
-                <h2>Photography</h2>
+                <div className="photos-text-title">
+                  <h2>Photography</h2>
                 </div>
                 <h5 className="border-box">
                   Although I consider myself a hobbyist when it comes to
@@ -159,29 +159,31 @@ function Hobbies() {
           {selectedItem === "items-climbing" ? (
             <>
               <div className="photos-text">
-              <div className='photos-text-title'>
-                <h2 id='climbing-title'>Backpacking / Climbing</h2>
+                <div className="photos-text-title">
+                  <h2 id="climbing-title">Backpacking / Climbing</h2>
                 </div>
                 <h5 className="border-box">
-                  I've always had an affinity for the great outdoors. Here are some of my
-                  favorite hikes:
+                  I've always had an affinity for the great outdoors. Here are
+                  some of my favorite hikes:
                 </h5>
-                <h6 className="border-box" id='climbing-bullets'>
+                <h6 className="border-box" id="climbing-bullets">
                   - Pemigewasset Loop, White Mountains, New Hampshire (31 mi)
                 </h6>
-                <h6 className='border-box' id='climbing-bullets'>
-                    - Havasu Falls, Supai, Arizona (20 mi)
-                  </h6>
-                <h6 className="border-box">
-                  I currently climb V4-5 in the gym (GP81) & recently made the transition to lead climbing / belaying. Here are some of my favorite outdoor spots:
+                <h6 className="border-box" id="climbing-bullets">
+                  - Havasu Falls, Supai, Arizona (20 mi)
                 </h6>
-                <h6 className='border-box' id='climbing-bullets'>
-                    - New River Gorge, West Virginia, USA
-                  </h6>
-                  <h6 className='border-box' id='climbing-bullets'>
-                    - Joshua Tree, California, USA
-                  </h6>
-                  <h6 className="border-box" id='climbing-bullets'>
+                <h6 className="border-box">
+                  I currently climb V4-5 in the gym (GP81) & recently made the
+                  transition to lead climbing / belaying. Here are some of my
+                  favorite outdoor spots:
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
+                  - New River Gorge, West Virginia, USA
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
+                  - Joshua Tree, California, USA
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
                   - Bunyola, Mallorca, Spain
                 </h6>
               </div>
@@ -192,31 +194,32 @@ function Hobbies() {
           {selectedItem === "items-snowboard" ? (
             <>
               <div className="photos-text">
-              <div className='photos-text-title'>
-                <h2>Snowboarding</h2>
+                <div className="photos-text-title">
+                  <h2>Snowboarding</h2>
                 </div>
                 <h5 className="border-box">
-                  Hitting the slopes is hands down one of my favorite pastimes during the winter.
+                  Hitting the slopes is hands down one of my favorite pastimes
+                  during the winter.
                 </h5>
                 <h6 className="border-box">
-                  I would categorize myself as an intermediate snowboarder - you can usually
-                  find me trying jumps at the terrain park.
+                  I would categorize myself as an intermediate snowboarder & you
+                  can usually find me trying jumps at the terrain park.
                 </h6>
                 <h6 className="border-box">
-                  Here are some of my favorite resorts:                
+                  Here are some of my favorite resorts:
                 </h6>
-                <h6 className='border-box' id='climbing-bullets'>
-                    - Heavenly (Lake Tahoe), California, USA
-                  </h6>     
-                  <h6 className='border-box' id='climbing-bullets'>
-                    - Mont Tremblant, Québec, Canada
-                  </h6>
-                  <h6 className='border-box' id='climbing-bullets'>
-                    - Park City, Utah, USA
-                  </h6>
-                  <h6 className='border-box' id='climbing-bullets'>
-                    - Vail, Colorado, USA
-                  </h6>           
+                <h6 className="border-box" id="climbing-bullets">
+                  - Northstar (Lake Tahoe), California, USA
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
+                  - Mont Tremblant, Québec, Canada
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
+                  - Park City, Utah, USA
+                </h6>
+                <h6 className="border-box" id="climbing-bullets">
+                  - Vail, Colorado, USA
+                </h6>
               </div>
             </>
           ) : (
@@ -277,7 +280,9 @@ function Hobbies() {
               <div className="items-item">
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
-                    During college, I decided to put my 10+ years of piano experience to work & taught myself Logic Pro X. Here are some of those projects.{" "}
+                    During college, I decided to put my 10+ years of piano
+                    experience to work & taught myself Logic Pro X. Here are
+                    some of those projects.{" "}
                   </h5>
                 </div>
               </div>
@@ -300,9 +305,9 @@ function Hobbies() {
               <div className="items-item">
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
-                    Here are some clips of the (many) random ideas I've
-                    come up with. These were created in Ableton Live 11
-                    after switching over from Logic Pro X.
+                    Here are some clips of the (many) random ideas I've come up
+                    with. These were created in Ableton Live 11 after switching
+                    over from Logic Pro X.
                   </h5>
                 </div>
               </div>
@@ -311,15 +316,41 @@ function Hobbies() {
             <></>
           )}
           {selectedItem === "items-snowboard" ? (
-            <div className="items-item">
-
+            <div className="items-item" id="climbing-video-item">
+              <video
+                className="climbing-video"
+                key="climbing-video"
+                autoPlay
+                loop
+                muted
+                preload="auto | metadata | none"
+                poster="https://tomleslieli-portfolio.s3.amazonaws.com/video-default.png"
+              >
+                <source
+                  src="https://tomleslieli-portfolio.s3.amazonaws.com/snowboarding-compressed.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           ) : (
             <></>
           )}
           {selectedItem === "items-climbing" ? (
-            <div className="items-item">
-
+            <div className="items-item" id="climbing-video-item">
+              <video
+                className="climbing-video"
+                key="climbing-video"
+                autoPlay
+                loop
+                muted
+                preload="auto | metadata | none"
+                poster="https://tomleslieli-portfolio.s3.amazonaws.com/video-default.png"
+              >
+                <source
+                  src="https://tomleslieli-portfolio.s3.amazonaws.com/climbing-compressed.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           ) : (
             <></>

@@ -2,26 +2,28 @@ import React, { useRef, useState, useEffect } from "react";
 import "../assets/stylesheets/mobile.scss";
 
 function Mobile() {
-  
   const [resizeNotice, setResizeNotice] = useState(true);
 
   return (
     <>
       <div className="mobile-container">
         <div className="mobile-contents">
-          { resizeNotice ? 
-          <div className="mobile-item" id="runs-best">
-            <div className='close-mobile-button'>
-              <i onClick={() => setResizeNotice(false)} class="fa-solid fa-circle-xmark"></i>
+          {resizeNotice ? (
+            <div className="mobile-item" id="runs-best">
+              <div className="close-mobile-button">
+                <i
+                  onClick={() => setResizeNotice(false)}
+                  class="fa-solid fa-circle-xmark"
+                ></i>
+              </div>
+              <h6 id="sixteennine">
+                This experience runs best in a 16x9 enviornment.
+              </h6>
+              <h6>Please open this site in a browser / resize your window.</h6>
             </div>
-            <h6 id="sixteennine">
-              This experience runs best in a 16x9 enviornment.
-            </h6>
-            <h6>
-              Please open this site in a browser / resize your window.
-            </h6>
-          </div> : <></>
-}
+          ) : (
+            <></>
+          )}
           <div className="mobile-item">
             <h1>Tom Leslie Li</h1>
             <h4>Software Engineer / Video Editor / Producer</h4>
