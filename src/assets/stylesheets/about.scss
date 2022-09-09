@@ -9,6 +9,8 @@
 .about-asset {
   position: absolute;
   min-width: 100%;
+  max-height: 540px;
+  min-height: 540px;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
@@ -18,16 +20,23 @@
 .about-asset-cart {
   position: absolute;
   min-height: 540px;
-  min-width: 1920px;
+  max-height: 540px;
+  min-width: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  animation: cartSlideOut 15s ease infinite;
 }
 
-.about-asset-cart > svg {
+.about-cart-container {
+  z-index: 1000;
+  min-width: 1920px;
+  min-height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  animation: cartSlideOut 15s ease infinite;
 }
 
 @keyframes cartSlideOut {
@@ -38,21 +47,27 @@
     margin-left: 0px;
   }
   100% {
-    margin-left: 2000px;
+    margin-left: 3000px;
   }
 }
 
 .about-asset-bg {
   z-index: 5;
   position: absolute;
-  min-width: 100%;
+  min-width: 1920px;
   min-height: 540px;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  //   background-color: rgb(18, 24, 29);
   background: linear-gradient(to bottom, rgb(18, 24, 29), #295f74);
+}
+
+.cart-left-right {
+  z-index: 1500;
+  background-color: #0f2d30;
+  min-width: 800px;
+  min-height: 540px;
 }
 
 .about-asset > svg {

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TransitionBackground from "./svgs/transition-background.jsx";
 import "../assets/stylesheets/video.scss";
 import PipesPipes from "./svgs/pipes-pipes.jsx";
@@ -32,7 +32,7 @@ function Video() {
         video.muted = false;
       }
     }
-  }, [isMuted]);
+  }, [isMuted, video]);
 
   const setPhony = () => {
     setCurrentVideo("phonyppl");
@@ -71,9 +71,9 @@ function Video() {
               <></>
             ) : (
               <>
-                <i class="fa-solid fa-caret-up"></i>
+                <i className="fa-solid fa-caret-up"></i>
                 <h5 onClick={() => setSideBarOpen(true)}>SHOW SIDEBAR</h5>
-                <i class="fa-solid fa-caret-up"></i>
+                <i className="fa-solid fa-caret-up"></i>
               </>
             )}
           </div>

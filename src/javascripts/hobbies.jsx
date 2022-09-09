@@ -123,16 +123,16 @@ function Hobbies() {
       <div className="hobbies-right">
         <div className="hobbies-buttons">
           <button onClick={() => setSelectedItem("items-photos")}>
-            <i class="fa-solid fa-camera fa-xl"></i>
+            <i className="fa-solid fa-camera fa-xl"></i>
           </button>
           <button onClick={() => setSelectedItem("items-music")}>
-            <i class="fa-brands fa-soundcloud fa-xl"></i>
+            <i className="fa-brands fa-soundcloud fa-xl"></i>
           </button>
           <button onClick={() => setSelectedItem("items-climbing")}>
-            <i class="fa-solid fa-mountain fa-xl"></i>
+            <i className="fa-solid fa-mountain fa-xl"></i>
           </button>
           <button onClick={() => setSelectedItem("items-snowboard")}>
-            <i class="fa-solid fa-person-snowboarding fa-xl"></i>
+            <i className="fa-solid fa-person-snowboarding fa-xl"></i>
           </button>
           <div className="placeholder" />
         </div>

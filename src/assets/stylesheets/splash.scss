@@ -189,18 +189,19 @@
 .splash-birds {
     z-index: 10;
     position: absolute;
-    top: 650px;
-    left: 2500px;
+    top: 60vh;
+    left: 100vw;
     animation: flying 10s linear
 }
 
 .splash-birds > img {
     max-width: 125px;
+    min-width: 125px;
 }
 
 @keyframes flying {
-    0%{ left: 2500px }
-    100%{ left: -1000px }
+    0%{ left: 100vw }
+    100%{ left: -50vw }
 }
 
 @media (max-width: 750px) {

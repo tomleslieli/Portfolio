@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/stylesheets/mobile.scss";
 
 function Mobile() {
@@ -13,7 +13,7 @@ function Mobile() {
               <div className="close-mobile-button">
                 <i
                   onClick={() => setResizeNotice(false)}
-                  class="fa-solid fa-circle-xmark"
+                  className="fa-solid fa-circle-xmark"
                 ></i>
               </div>
               <h6 id="sixteennine">

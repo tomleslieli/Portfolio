@@ -14,6 +14,21 @@ import RocksThree from "./svgs/rocks-three.jsx";
 function About() {
   return (
     <>
+          <div className='cart-left-right'/>
+      <div className='about-cart-container'>
+      <div className="about-asset-cart">
+        <Cart />
+      </div>
+      <div className="about-asset-cart">
+        <RocksOne />
+      </div>
+      <div className="about-asset-cart">
+        <RocksTwo />
+      </div>
+      <div className="about-asset-cart">
+        <RocksThree />
+      </div>
+      </div>
       <div className="about-contents-container">
         <div className="about-left">
           <div className="about-item">
@@ -94,18 +109,6 @@ function About() {
       <div className="about-asset">
         <DarkBlue />
       </div>
-      <div className="about-asset-cart">
-        <Cart />
-      </div>
-      <div className="about-asset-cart">
-        <RocksOne />
-      </div>
-      <div className="about-asset-cart">
-        <RocksTwo />
-      </div>
-      <div className="about-asset-cart">
-        <RocksThree />
-      </div>
       <div className="about-asset">
         <Tools />
       </div>
@@ -119,6 +122,8 @@ function About() {
         <DarkGrey />
       </div>
       <div className="about-asset-bg" />
+      <div className='cart-left-right'/>
+
     </>
   );
 }
