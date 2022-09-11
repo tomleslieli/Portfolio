@@ -75,6 +75,7 @@ function Hobbies() {
         const whiteMid = document.getElementById("white-mid");
         whiteMid.style.opacity = "100%";
         whiteMid.style.display = "block";
+        
       }
       const currentTarget = document.getElementById(`${selectedItem}`);
       currentTarget.style.opacity = "100%";
@@ -84,12 +85,13 @@ function Hobbies() {
 
   const tracksSlider = () => {
     const slider = document.querySelector(".tracks-slider");
-    if (fullTracks) {
+    setFullTracks(!fullTracks);
+    if (slider && fullTracks) {
       slider.style.transform = "translate(31px, 0px)";
     } else {
       slider.style.transform = "translate(0px, 0px)";
     }
-    setFullTracks(!fullTracks);
+    console.log(fullTracks)
   };
 
   return (
@@ -294,8 +296,10 @@ function Hobbies() {
             <></>
           )}
           {selectedItem === "items-music" ? (
+            <>
             <div className="music-text">
               <h2>Music Production</h2>
+              <h5 id='toggle-instructions'>Use the toggle to switch between full tracks & works in progress.</h5>
               <div className="tracks-toggle" onClick={() => tracksSlider()}>
                 <div className="tracks-slider" />
                 {fullTracks ? (
@@ -305,6 +309,7 @@ function Hobbies() {
                 )}
               </div>
             </div>
+            </>
           ) : (
             <></>
           )}
@@ -321,7 +326,7 @@ function Hobbies() {
                   title="soundcloud-player"
                   height="450px"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1473581347&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false&sharing=false"
                 ></iframe>
@@ -330,8 +335,9 @@ function Hobbies() {
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
                     During college, I decided to put my 10+ years of piano
-                    experience to work & taught myself Logic Pro X. Here are
-                    some of those projects.{" "}
+                    experience to work & taught myself to produce on Logic Pro X. Over the years, I learned to use additional
+                    third party software / synthesizers like Massive by Native Instruments
+                    & Serum by Xfer Records.{" "}
                   </h5>
                 </div>
               </div>
@@ -352,7 +358,7 @@ function Hobbies() {
                   title="soundcloud-player"
                   height="450px"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1479437002%3Fsecret_token%3Ds-8DEJ0ncbpUh&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false&single_active=true&show_playcount=false"
                 ></iframe>
@@ -361,7 +367,10 @@ function Hobbies() {
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
                     Here are some clips of the (many) random ideas I've come up
-                    with. These were created in Ableton Live 11 after switching
+                    with. Although I never ended up pursuing music professionally,
+                    music production is one of my go-to forms of stress relief,
+                    and I often try to create the tunes that pop up in my head.
+                    These were created in Ableton Live 11 after switching
                     over from Logic Pro X.
                   </h5>
                 </div>
