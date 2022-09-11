@@ -32,7 +32,7 @@ function Video() {
         video.muted = false;
       }
     }
-  }, [isMuted, video]);
+  }, [isMuted]);
 
   const setPhony = () => {
     setCurrentVideo("phonyppl");

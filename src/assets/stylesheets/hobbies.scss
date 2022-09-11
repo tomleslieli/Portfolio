@@ -515,3 +515,92 @@
   display: flex;
   justify-content: center;
 }
+
+.hobbies-buttons-helper {
+  position: absolute;
+  min-width: 65px;
+  min-height: 275px;
+  border-radius: 5px;
+  background-color: #4b6573;
+  animation: helperFade 1s ease;
+}
+
+@keyframes helperFade {
+  0% {
+    opacity: 0%;
+    transform: translate(-100px, 0px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translate(0px, 0px);
+  }
+}
+
+.tab-helper-left {
+  z-index: 1500;
+  position: absolute;
+  min-width: 50%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  animation: itemSlideIn 1s ease-out, itemFadeIn 1s ease-out;
+  font-size: 20px;
+  cursor: default;
+  margin-top: -4%;
+}
+
+.tab-helper-left > h5 {
+  transition: color 0.5s ease;
+}
+
+.tab-helper-left > h5:hover {
+  color: #4b6573;
+}
+
+.tracks-toggle {
+  z-index: 150;
+  min-width: 70px;
+  max-width: 70px;
+  min-height: 30px;
+  max-height: 30px;
+  background-color: #577382;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 15px rgb(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tracks-slider {
+  z-index: 155;
+  border-radius: 100px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  background-color: #ffcbb8;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.wip {
+  margin-right: 5px;
+  font-size: 10px;
+  animation: itemFadeIn 0.5s ease;
+}
+
+.full {
+  margin-right: 5px;
+  margin-left: 2px;
+  transform: translate(-35px, 0px);
+  font-size: 10px;
+  animation: itemFadeIn 0.5s ease;
+}

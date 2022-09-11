@@ -16,6 +16,8 @@ function Hobbies() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [allArr, setAllArr] = useState([]);
   const [allClicked, setAllClicked] = useState(false);
+  const [help, setHelp] = useState(false);
+  const [fullTracks, setFullTracks] = useState(true);
 
   useEffect(() => {
     if (selectedItem === "items-photos" && !allArr.includes("items-photos")) {
@@ -37,6 +39,14 @@ function Hobbies() {
       setAllArr((oldArr) => [...oldArr, "items-snowboard"]);
     }
   }, [selectedItem]);
+
+  const mouseOn = () => {
+    setHelp(true);
+  };
+
+  const mouseOff = () => {
+    setHelp(false);
+  };
 
   useEffect(() => {
     if (
@@ -72,8 +82,27 @@ function Hobbies() {
     }
   }, [selectedItem]);
 
+  const tracksSlider = () => {
+    const slider = document.querySelector(".tracks-slider");
+    if (fullTracks) {
+      slider.style.transform = "translate(31px, 0px)";
+    } else {
+      slider.style.transform = "translate(0px, 0px)";
+    }
+    setFullTracks(!fullTracks);
+  };
+
   return (
     <>
+      {selectedItem === null ? (
+        <div className="tab-helper-left">
+          <h5 onMouseEnter={() => mouseOn()} onMouseLeave={() => mouseOff()}>
+            Please select one of the tabs below
+          </h5>
+        </div>
+      ) : (
+        <></>
+      )}
       <div className="hobbies-left">
         <div className="thank-you-container">
           {allClicked ? (
@@ -121,6 +150,7 @@ function Hobbies() {
         </div>
       </div>
       <div className="hobbies-right">
+        {help ? <div className="hobbies-buttons-helper"></div> : <></>}
         <div className="hobbies-buttons">
           <button onClick={() => setSelectedItem("items-photos")}>
             <i className="fa-solid fa-camera fa-xl"></i>
@@ -240,7 +270,12 @@ function Hobbies() {
                     These are my go-tos to decompress, and have become an
                     integral part of my life.
                   </h3>
-                  <h5>(Use the tabs below)</h5>
+                  <h5
+                    onMouseEnter={() => mouseOn()}
+                    onMouseLeave={() => mouseOff()}
+                  >
+                    (Use the tabs below)
+                  </h5>
                 </div>
               </div>
             </>
@@ -259,10 +294,24 @@ function Hobbies() {
             <></>
           )}
           {selectedItem === "items-music" ? (
+            <div className="music-text">
+              <h2>Music Production</h2>
+              <div className="tracks-toggle" onClick={() => tracksSlider()}>
+                <div className="tracks-slider" />
+                {fullTracks ? (
+                  <h6 className="wip">WIP</h6>
+                ) : (
+                  <h6 className="full">FULL</h6>
+                )}
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+          {selectedItem === "items-music" && fullTracks ? (
             <>
               <div className="items-item">
                 <div className="music-text">
-                  <h2>Music Production</h2>
                   <h3>Full Tracks</h3>
                 </div>
               </div>
@@ -270,7 +319,7 @@ function Hobbies() {
                 <iframe
                   width="70%"
                   title="soundcloud-player"
-                  height="275px"
+                  height="450px"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
@@ -286,16 +335,22 @@ function Hobbies() {
                   </h5>
                 </div>
               </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {selectedItem === "items-music" && !fullTracks ? (
+            <>
               <div className="items-item">
                 <div className="music-text">
-                  <h3>Unfinished Ideas</h3>
+                  <h3>Work In Progress</h3>
                 </div>
               </div>
               <div className="items-item">
                 <iframe
                   width="70%"
                   title="soundcloud-player"
-                  height="275px"
+                  height="450px"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
@@ -315,6 +370,7 @@ function Hobbies() {
           ) : (
             <></>
           )}
+
           {selectedItem === "items-snowboard" ? (
             <div className="items-item" id="climbing-video-item">
               <video
