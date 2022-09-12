@@ -233,8 +233,8 @@ function Hobbies() {
                   during the winter.
                 </h5>
                 <h6 className="border-box">
-                  I would categorize myself as an intermediate snowboarder & you
-                  can usually find me trying jumps at the terrain park.
+                  I consider myself an intermediate snowboarder &
+                  I'm a big fan of the terrain park.
                 </h6>
                 <h6 className="border-box">
                   Here are some of my favorite resorts:
