@@ -382,6 +382,7 @@ function Hobbies() {
 
         </div>
       </div>
+      { selectedItem === 'items-snowboard' || selectedItem === 'items-climbing' ?
       <div className='hobbies-right-centered'>
       {selectedItem === "items-snowboard" ? (
             <div id="climbing-video-item">
@@ -424,6 +425,8 @@ function Hobbies() {
             <></>
           )}
       </div>
+      : <></>
+    }
     </>
   );
 }
