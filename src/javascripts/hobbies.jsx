@@ -91,7 +91,6 @@ function Hobbies() {
     } else {
       slider.style.transform = "translate(0px, 0px)";
     }
-    console.log(fullTracks)
   };
 
   return (
