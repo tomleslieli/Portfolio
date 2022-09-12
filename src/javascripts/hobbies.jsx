@@ -268,7 +268,7 @@ function Hobbies() {
                     Over the years, I've accumulated a handful of interests &
                     hobbies.
                   </h3>
-                  <h3>
+                  <h3 id='these-are'>
                     These are my go-tos to decompress, and have become an
                     integral part of my life.
                   </h3>
@@ -380,8 +380,11 @@ function Hobbies() {
             <></>
           )}
 
-          {selectedItem === "items-snowboard" ? (
-            <div className="items-item" id="climbing-video-item">
+        </div>
+      </div>
+      <div className='hobbies-right-centered'>
+      {selectedItem === "items-snowboard" ? (
+            <div id="climbing-video-item">
               <video
                 className="climbing-video"
                 key="climbing-video"
@@ -420,7 +423,6 @@ function Hobbies() {
           ) : (
             <></>
           )}
-        </div>
       </div>
     </>
   );
