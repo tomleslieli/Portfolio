@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/stylesheets/projects.scss";
 import ProjectsWindowBackground from "./svgs/projects-window-background.jsx";
 import ProjectsWindowButtons from "./svgs/projects-window-buttons.jsx";
