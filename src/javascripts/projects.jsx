@@ -145,7 +145,9 @@ function Projects() {
                 price charts.
               </p>
               <div className="project-links">
-                <a href="https://roobinhud.herokuapp.com" target="_blank">
+                <a href="https://roobinhud.onrender.com" 
+                target="_blank"
+                rel="noreferrer">
                   Live Link
                 </a>
                 <a
@@ -168,7 +170,7 @@ function Projects() {
               </p>
               <div className="project-links">
                 <a
-                  href="https://aa-linealert.herokuapp.com/"
+                  href="https://aa-linealert.onrender.com"
                   target="_blank"
                   rel="noreferrer"
                 >
