@@ -75,7 +75,6 @@ function Hobbies() {
         const whiteMid = document.getElementById("white-mid");
         whiteMid.style.opacity = "100%";
         whiteMid.style.display = "block";
-        
       }
       const currentTarget = document.getElementById(`${selectedItem}`);
       currentTarget.style.opacity = "100%";
@@ -233,8 +232,8 @@ function Hobbies() {
                   during the winter.
                 </h5>
                 <h6 className="border-box">
-                  I consider myself an intermediate snowboarder &
-                  I'm a big fan of the terrain park.
+                  I consider myself an intermediate snowboarder & I'm a big fan
+                  of the terrain park.
                 </h6>
                 <h6 className="border-box">
                   Here are some of my favorite resorts:
@@ -267,7 +266,7 @@ function Hobbies() {
                     Over the years, I've accumulated a handful of interests &
                     hobbies.
                   </h3>
-                  <h3 id='these-are'>
+                  <h3 id="these-are">
                     These are my go-tos to decompress, and have become an
                     integral part of my life.
                   </h3>
@@ -296,18 +295,21 @@ function Hobbies() {
           )}
           {selectedItem === "items-music" ? (
             <>
-            <div className="music-text">
-              <h2>Music Production</h2>
-              <h5 id='toggle-instructions'>Use the toggle to switch between full tracks & works in progress.</h5>
-              <div className="tracks-toggle" onClick={() => tracksSlider()}>
-                <div className="tracks-slider" />
-                {fullTracks ? (
-                  <h6 className="wip">WIP</h6>
-                ) : (
-                  <h6 className="full">FULL</h6>
-                )}
+              <div className="music-text">
+                <h2>Music Production</h2>
+                <h5 id="toggle-instructions">
+                  Use the toggle to switch between full tracks & works in
+                  progress.
+                </h5>
+                <div className="tracks-toggle" onClick={() => tracksSlider()}>
+                  <div className="tracks-slider" />
+                  {fullTracks ? (
+                    <h6 className="wip">WIP</h6>
+                  ) : (
+                    <h6 className="full">FULL</h6>
+                  )}
+                </div>
               </div>
-            </div>
             </>
           ) : (
             <></>
@@ -334,9 +336,10 @@ function Hobbies() {
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
                     During college, I decided to put my 10+ years of piano
-                    experience to work & taught myself to produce on Logic Pro X. Over the years, I learned to use additional
-                    third party software / synthesizers like Massive by Native Instruments
-                    & Serum by Xfer Records.{" "}
+                    experience to work & taught myself to produce on Logic Pro
+                    X. Over the years, I learned to use additional third party
+                    software / synthesizers like Massive by Native Instruments &
+                    Serum by Xfer Records.{" "}
                   </h5>
                 </div>
               </div>
@@ -366,11 +369,11 @@ function Hobbies() {
                 <div className="music-text">
                   <h5 className="border-box-music" id="throughout-college">
                     Here are some clips of the (many) random ideas I've come up
-                    with. Although I never ended up pursuing music professionally,
-                    music production is one of my go-to forms of stress relief,
-                    and I often try to create the tunes that pop up in my head.
-                    These were created in Ableton Live 11 after switching
-                    over from Logic Pro X.
+                    with. Although I never ended up pursuing music
+                    professionally, music production is one of my go-to forms of
+                    stress relief, and I often try to create the tunes that pop
+                    up in my head. These were created in Ableton Live 11 after
+                    switching over from Logic Pro X.
                   </h5>
                 </div>
               </div>
@@ -378,12 +381,12 @@ function Hobbies() {
           ) : (
             <></>
           )}
-
         </div>
       </div>
-      { selectedItem === 'items-snowboard' || selectedItem === 'items-climbing' ?
-      <div className='hobbies-right-centered'>
-      {selectedItem === "items-snowboard" ? (
+      {selectedItem === "items-snowboard" ||
+      selectedItem === "items-climbing" ? (
+        <div className="hobbies-right-centered">
+          {selectedItem === "items-snowboard" ? (
             <div id="climbing-video-item">
               <video
                 className="climbing-video"
@@ -423,9 +426,10 @@ function Hobbies() {
           ) : (
             <></>
           )}
-      </div>
-      : <></>
-    }
+        </div>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

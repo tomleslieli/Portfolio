@@ -77,9 +77,10 @@ function Mobile() {
             </h5>
             <div className="mobile-links-container">
               <a
-                href="https://roobinhud.herokuapp.com"
+                href="https://roobinhud.onrender.com"
                 className="mobile-link"
                 target="_blank"
+                rel="noreferrer"
               >
                 Live Link
               </a>
@@ -100,7 +101,7 @@ function Mobile() {
             </h5>
             <div className="mobile-links-container">
               <a
-                href="https://aa-linealert.herokuapp.com/"
+                href="https://aa-linealert.onrender.com"
                 className="mobile-link"
                 target="_blank"
                 rel="noreferrer"
@@ -123,6 +124,7 @@ function Mobile() {
               href="https://vimeo.com/490636317"
               target="_blank"
               className="mobile-link"
+              rel="noreferrer"
             >
               <h4 id="phony-mobile">
                 Phony Ppl - On My Shit (feat. Joey Bada$$) - Behind the Scenes
@@ -132,6 +134,7 @@ function Mobile() {
               href="https://vimeo.com/538925669"
               target="_blank"
               className="mobile-link"
+              rel="noreferrer"
             >
               <h4>
                 Ingrid Michaelson, ZAYN - To Begin Again (Official Music Video)
@@ -141,6 +144,7 @@ function Mobile() {
               href="https://vimeo.com/351079177"
               target="_blank"
               className="mobile-link"
+              rel="noreferrer"
             >
               <h4>Athletix CBD - Jim Miller</h4>
             </a>
@@ -148,6 +152,7 @@ function Mobile() {
               href="https://vimeo.com/275677750"
               target="_blank"
               className="mobile-link"
+              rel="noreferrer"
             >
               <h4>Axtone Miami 2018</h4>
             </a>
